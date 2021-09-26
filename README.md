@@ -16,9 +16,9 @@ There was a great difference in the processing time between the refactored analy
 
 ![VBA_Challenge_2017_Original_Code.png](/Resources/VBA_Challenge_2017_Original_Code.png)
 
-The original code looped through each ticker, then looped through each row to find the starting and ending prices as well as the volume. It would then output the results of that ticker to the spreadsheet before starting on the next ticker. See below for code for the original project.
+The original code used lists to loop through each ticker, then looped through each row to find the starting and ending prices as well as the volume. It would then output the results of that ticker to the spreadsheet before starting on the next ticker. See below for code for the original project.
 
-	*'Loop through the tickers
+	'Loop through the tickers
 	For i = 0 To 11
 
 	    ticker = tickers(i)
@@ -61,11 +61,11 @@ The original code looped through each ticker, then looped through each row to fi
 	Cells(4 + i, 2).Value = totalVolume
 	Cells(4 + i, 3).Value = (endingPrice / startingPrice) - 1
 
-	Next i*
+	Next i
 
 The refactored code used arrays to perform the loops rather than lists, which dramatically improved the performance. Below is the code used to run the arrays in the refactored VBA.
 
-	*'Initialize array of all tickers
+	'Initialize array of all tickers
 	    Dim tickers(12) As String
 	    
 	        tickers(0) = "AY"
@@ -141,7 +141,7 @@ The refactored code used arrays to perform the loops rather than lists, which dr
 	        
 	        Next i
 
-	Next tickerIndex*
+	Next tickerIndex
 
 ### 2018 Results
 
@@ -159,11 +159,6 @@ Again, there was a large difference in the processing time between the refactore
 By analyzing two years of stock, Steve's parents should probably find a different stock to invest in than DQ. ENPH seemed to have sustainable returns and volumes. Its volumes were 221,772,100 in 2017 and increased to 607,473,500 in 2018. The return for ENPH was 129.5% in 2017, the third highest of all companies, and achieved the second highest results of all companies in 2018 at 81.9%. Only two companies achieved positive returns in 2018.
 
 The refactored project altered the code from the initial project by using an array rather than a list. The code using the array performed over four times faster. 
-
-	a. 2017 original code, length of run time: 		1.558594 seconds
-	b. 2017 refactored code, length of run time:	0.3554688 seconds
-	c. 2018 original code, length of run time: 		1.53125 seconds
-	d. 2018 refactored code, length of run time: 	0.3789063 seconds
 
 Although it may not seem like refactoring the code saved much time, the dataset was actually fairly small as it only included data for 12 companies. If the analysis were done on a large dataset, the initial VBA code could save significant time. The refactored code using the array structure seems like one solution for processing issues.
 
