@@ -6,7 +6,7 @@ This project analyzes the stock performance of twelve different "green" companie
 
 ## Stock Analysis Results
 
-# 2017 Results
+### 2017 Results
 
 Looking at the results for the 2017 stock performance, it may appear that Steve's parents have picked a good stock to invest in. Their choice for investment was DQ (DAQO New Energy Corporation), and it had the highest overall return of all companies in 2017, with a 199.4% return. That said, the total daily volume of DQ was the *lowest* of all companies, with only 35,796,200 shares traded, while the highest volume of 782,187,000 was for SPWR. The difference between these two companies is 746,390,800. *Investopedia* notes that investors use trading volume to signal whether a trend will continue. Since the trading volume is low in 2017, there is a possibility that this may not be a good stock to invest in. The image below shows the outcome for all 2017 stocks using the refactored code.
 
@@ -143,7 +143,7 @@ The refactored code used arrays to perform the loops rather than lists, which dr
 
 	Next tickerIndex*
 
-# 2018 Results
+### 2018 Results
 
 When analyzing stock performance, it is recommended that trends be analyzed over time. While the DQ stock did well in 2017, it did not perform well in 2018. While the total daily volume was up from 2017 (107,873,900 in 2018 compared to 35,796,200 in 2017), the return was down substantially. The rate of return went from 199.4% in 2017 to -62.6% in 2018. The total volume includes both purchases and sales of stocks, so there is a possibility that the volume was high because investors were selling their shares. The image below shows the outcome for all 2018 stocks.
 
